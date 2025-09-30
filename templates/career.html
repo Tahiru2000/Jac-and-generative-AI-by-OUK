@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Assistant</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; padding: 0; }
+    .container { max-width: 500px; margin: 30px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1);}
+    input, select, button { width: 100%; padding: 10px; margin: 8px 0; border-radius: 5px; border: 1px solid #ccc;}
+    button { background: #004080; color: white; font-weight: bold; cursor: pointer;}
+    button:hover { background: #0066cc; }
+    .result { background: #e6f2ff; border-left: 5px solid #004080; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>💼 Career Assistant</h2>
+  <form method="POST">
+    <label>Field of Interest:</label>
+    <input type="text" name="field" placeholder="e.g., IT, Business, Health" required>
+
+    <label>Skills (comma separated):</label>
+    <input type="text" name="skills" placeholder="e.g., Python, Leadership" required>
+
+    <button type="submit">Get Guidance</button>
+  </form>
+
+  {% if result %}
+  <div class="result">
+    <h3>Result:</h3>
+    <pre>{{ result }}</pre>
+  </div>
+  {% endif %}
+</div>
+</body>
+</html>

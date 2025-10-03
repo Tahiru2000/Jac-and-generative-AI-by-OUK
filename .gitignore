@@ -1,2 +1,5 @@
 AI_Chatbot/venv/
 AI_Chatbot/venv/
+venv/
+__pycache__/
+SMART_AI_ASSISTANT/

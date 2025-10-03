@@ -1,0 +1,8 @@
+jaclang
+jac-cloud
+flask
+gunicorn
+uvicorn
+python-dotenv
+requests
+sqlalchemy

@@ -1,0 +1,7 @@
+jaclang
+fastapi
+uvicorn[standard]
+requests
+sentence-transformers
+faiss-cpu
+jaseci

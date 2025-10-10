@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jac Agent Query UI</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background: #f4f4f4; }
+        h1 { color: #333; }
+        textarea { width: 100%; height: 100px; }
+        button { padding: 10px 20px; margin-top: 10px; }
+        #response { margin-top: 20px; padding: 10px; background: #fff; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Jac Agent Query UI</h1>
+    <textarea id="query" placeholder="Type your query here..."></textarea><br>
+    <button onclick="sendQuery()">Send Query</button>
+
+    <div id="response">Response will appear here...</div>
+
+    <script>
+        async function sendQuery() {
+            const queryText = document.getElementById("query").value;
+            const responseDiv = document.getElementById("response");
+
+            try {
+                const res = await fetch("/agent/query", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ session: "anon", query: queryText })
+                });
+
+                const data = await res.json();
+                responseDiv.textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                responseDiv.textContent = "Error: " + err;
+            }
+        }
+    </script>
+</body>
+</html>

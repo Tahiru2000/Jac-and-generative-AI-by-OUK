@@ -1,0 +1,63 @@
+<<<<<<< HEAD
+AI_Chatbot/venv/
+AI_Chatbot/venv/
+venv/
+__pycache__/
+SMART_AI_ASSISTANT/
+=======
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# --- Virtual Environments ---
+venv/
+venv311/
+env/
+ENV/
+.virtualenv/
+*.env
+
+# --- OS and Editor Files ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Build and Distribution ---
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Database Files ---
+*.db
+*.sqlite3
+*.sqlite
+
+# --- FAISS Index (if large, optional to exclude) ---
+data/faiss_index.bin
+data/faiss_meta.json
+
+# --- Cache & Temporary ---
+*.cache/
+tmp/
+logs/
+*.bak
+*.old
+
+# --- Jupyter or Notebook ---
+.ipynb_checkpoints/
+
+# --- API Keys or Configs (if any) ---
+.env
+config.json
+
+# --- Node / Frontend (if you ever add one) ---
+node_modules/
+  venv311/
